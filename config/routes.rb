@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get '/om-foreningen' => 'about#index', as: 'about'
 
-  resources :news_items
+  resources :news_items, path: 'nyheter'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
