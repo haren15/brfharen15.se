@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center page-header">Vanliga frågor och svar</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      porta, libero a congue semper, ligula felis lobortis elit, at
+      tincidunt ex nisl gravida justo. Sed viverra sapien mi, in vehicula
+      lorem tristique a. Vivamus venenatis turpis odio, ut ultrices arcu
+      fermentum at.
+    </p>
+
+    <ul>
+      <% @faqs.each do |faq| %>
+        <li>
+          <%= link_to faq.question, '#' + faq.id.to_s %>
+        </li>
+      <% end %>
+    </ul>
+
+    <hr />
+
+    <ul>
+      <% @faqs.each do |faq| %>
+        <li>
+          <a name="<%= faq.id.to_s %>"></a>
+          <p><b><%= faq.question %></b></p>
+          <p><%= faq.answer %></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
