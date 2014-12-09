@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'contact/index'
+
   root 'welcome#index'
 
   get '/om-foreningen' => 'about#index', as: 'about'
+  get '/kontakt' => 'contact#index', as: 'contact'
 
   resources :news_items, path: 'nyheter'
 
