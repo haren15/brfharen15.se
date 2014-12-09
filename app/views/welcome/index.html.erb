@@ -1,0 +1,24 @@
+<% content_for :header do %>
+  <h1 class="welcome text-center">Välkommen till BRF Haren 15!</h1>
+<% end %>
+
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center page-header">BRF Haren 15</h1>
+    <p class="text-center">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+      porta, libero a congue semper, ligula felis lobortis elit, at
+      tincidunt ex nisl gravida justo. Sed viverra sapien mi, in vehicula
+      lorem tristique a. Vivamus venenatis turpis odio, ut ultrices arcu
+      fermentum at. Nullam tincidunt at arcu eget congue. Pellentesque
+      faucibus sem sit amet tincidunt aliquet. Aliquam id turpis id enim
+      bibendum imperdiet sed ut nibh.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <%= render_news_item_puff @news_item_1 %>
+  <%= render_news_item_puff @news_item_2 %>
+  <%= render_news_item_puff @news_item_3 %>
+</div>

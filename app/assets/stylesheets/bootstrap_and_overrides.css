@@ -4,4 +4,58 @@
   Use Font Awesome icons (default)
   To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
   =require twitter-bootstrap-static/fontawesome
-  */
+*/
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+header {
+  background: url(/assets/fabriksgatan.jpg) no-repeat;
+  background-size: 100% auto;
+}
+
+body.welcome header {
+  height: 400px;
+}
+
+header nav {
+  margin-top: 40px;
+}
+
+header nav ul li {
+  float: left;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: white;
+}
+
+header h1.brand a {
+  color: white;
+  font-size: 22px;
+}
+
+footer {
+  background: #464646;
+  color: white;
+  padding: 30px 0;
+}
+
+h1.welcome {
+  color: white;
+  font-size: 26px;
+  margin-top: 100px;
+}
+
+section#main {
+  margin: 50px 0;
+}
+
+h1.page-header {
+  font-weight: bolder;
+  font-size: 26px;
+  border: none;
+}

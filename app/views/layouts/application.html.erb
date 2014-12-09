@@ -2,11 +2,56 @@
 <html>
   <head>
     <title>Haren</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
-    <%= yield %>
+  <body class="<%= params[:controller] %>">
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="brand">
+              <%= link_to 'BRF Haren 15', root_path %>
+            </h1>
+          </div>
+          <div class="col-md-6">
+            <nav class="pull-right">
+              <ul>
+                <li><a href="#">Om föreningen</a></li>
+                <li><a href="#">Nyheter</a></li>
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <%= yield :header %>
+    </header>
+
+    <section id="main">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p><b>BRF Haren 15</b></p>
+            <p>Fabriksgatan</p>
+            <p>431 67 Mölndal</p>
+            <p>brfharen15@gmail.com</p>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
