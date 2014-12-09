@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  get '/om-foreningen' => 'about#index', as: :about
+  get '/om-foreningen' => 'about#index', as: 'about'
 
   resources :news_items
 
