@@ -1,0 +1,16 @@
+<table class="table">
+  <tbody>
+    <% @news_items.each do |news_item| %>
+      <tr>
+        <td>
+          <img src="http://placehold.it/300x300" alt="" />
+        </td>
+        <td>
+          <h2><%= news_item.title %></h2>
+          <p><%= truncate news_item.description, length: 500 %></p>
+          <%= link_to 'Läs mer', news_item %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
