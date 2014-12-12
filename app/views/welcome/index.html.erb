@@ -18,7 +18,15 @@
 </div>
 
 <div class="row">
-  <%= render_news_item_puff @news_item_1 %>
-  <%= render_news_item_puff @news_item_2 %>
-  <%= render_news_item_puff @news_item_3 %>
+  <div class="col-md-4">
+    <%= render_news_item @news_item_1 %>
+  </div>
+
+  <div class="col-md-4">
+    <%= render_news_item @news_item_2 %>
+  </div>
+
+  <div class="col-md-4">
+    <%= render_news_item @news_item_3 %>
+  </div>
 </div>

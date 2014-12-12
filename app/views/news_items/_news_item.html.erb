@@ -1,0 +1,6 @@
+<h2><%= news_item.title %></h2>
+<p>
+  <img src="http://placehold.it/360x150" alt="" />
+</p>
+<p><%= truncate news_item.description, length: 200 %></p>
+<p><%= link_to 'Läs mer', news_item %></p>
