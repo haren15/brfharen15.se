@@ -1,3 +1,7 @@
+<%= render_title 'news_items' %>
+
+<%= render_blob 'news_items', 'contents', markdown: true %>
+
 <table class="table">
   <tbody>
     <% @news_items.each do |news_item| %>
