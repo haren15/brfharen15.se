@@ -14,24 +14,24 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h1 class="brand">
+            <h1>
               <%= link_to 'BRF Haren 15', root_path %>
             </h1>
           </div>
           <div class="col-md-6">
             <nav class="pull-right">
               <ul>
-                <li><%= link_to 'Om föreningen', about_path %></li>
-                <li><%= link_to 'Nyheter', news_items_path %></li>
-                <li><%= link_to 'Kontakt', contact_path %></li>
-                <li><%= link_to 'Vanliga frågor och svar', faqs_path %></li>
+                <li><%= link_to render_blob('about', 'title'), about_path %></li>
+                <li><%= link_to render_blob('news_items', 'title'), news_items_path %></li>
+                <li><%= link_to render_blob('contact', 'title'), contact_path %></li>
+                <li><%= link_to render_blob('faq', 'title'), faqs_path %></li>
               </ul>
             </nav>
           </div>
         </div>
-      </div>
 
-      <%= yield :header %>
+        <%= yield :header %>
+      </div>
     </header>
 
     <section id="main">
