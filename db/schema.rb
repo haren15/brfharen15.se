@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141209142223) do
+ActiveRecord::Schema.define(version: 20141212095333) do
+
+  create_table "blobs", force: true do |t|
+    t.string   "key"
+    t.text     "contents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "faqs", force: true do |t|
     t.string   "question"

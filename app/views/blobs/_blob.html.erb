@@ -1,0 +1,19 @@
+<% if blob.present? %>
+  <% if options[:markdown] %>
+    <%= markdown blob.contents %>
+  <% else %>
+    <%= blob.contents %>
+  <% end %>
+
+  <a href="/blobs/<%= blob.id %>/edit" class="fancybox" data-fancybox-type="ajax">
+    <i class="fa fa-edit"></i>
+  </a>
+<% else %>
+  <p>
+    <a href="javascript: void(0);">
+      <i class="fa fa-plus"></i>
+    </a>
+    Add blob for
+    <strong><%= key %></strong>
+  </p>
+<% end %>

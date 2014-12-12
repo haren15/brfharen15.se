@@ -1,37 +1,7 @@
 <div class="row">
   <div class="col-md-12">
-    <h1 class="text-center page-header">Om Föreningen</h1>
+    <%= render_title 'about' %>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      porta, libero a congue semper, ligula felis lobortis elit, at
-      tincidunt ex nisl gravida justo. Sed viverra sapien mi, in vehicula
-      lorem tristique a. Vivamus venenatis turpis odio, ut ultrices arcu
-      fermentum at. Nullam tincidunt at arcu eget congue. Pellentesque
-      faucibus sem sit amet tincidunt aliquet. Aliquam id turpis id enim
-      bibendum imperdiet sed ut nibh.
-    </p>
-
-    <p><img src="http://placehold.it/600x300" alt="" /></p>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      porta, libero a congue semper, ligula felis lobortis elit, at
-      tincidunt ex nisl gravida justo. Sed viverra sapien mi, in vehicula
-      lorem tristique a. Vivamus venenatis turpis odio, ut ultrices arcu
-      fermentum at. Nullam tincidunt at arcu eget congue. Pellentesque
-      faucibus sem sit amet tincidunt aliquet. Aliquam id turpis id enim
-      bibendum imperdiet sed ut nibh.
-    </p>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      porta, libero a congue semper, ligula felis lobortis elit, at
-      tincidunt ex nisl gravida justo. Sed viverra sapien mi, in vehicula
-      lorem tristique a. Vivamus venenatis turpis odio, ut ultrices arcu
-      fermentum at. Nullam tincidunt at arcu eget congue. Pellentesque
-      faucibus sem sit amet tincidunt aliquet. Aliquam id turpis id enim
-      bibendum imperdiet sed ut nibh.
-    </p>
+    <%= render_blob 'about', 'contents', markdown: true %>
   </div>
 </div>

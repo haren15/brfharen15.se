@@ -14,4 +14,18 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require turbolinks
+//= require fancybox
+//= require jquery.form.min
 //= require_tree .
+
+$(document).ready(function() {
+  $('a.fancybox').fancybox({
+    beforeShow: function() {
+      $('form.blob').ajaxForm(function() {
+        $.fancybox.close();
+
+        window.location.reload();
+      });
+    }
+  });
+});

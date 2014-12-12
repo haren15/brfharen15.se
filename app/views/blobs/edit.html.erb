@@ -1,0 +1,7 @@
+<h2>Edit <%= @blob.key %></h2>
+
+<%= simple_form_for(@blob, html: { class: 'form-horizontal blob' }) do |form| %>
+  <%= form.input :contents, label: false, input_html: { rows: 15, cols: 100 } %>
+
+  <%= form.submit class: 'btn' %>
+<% end %>

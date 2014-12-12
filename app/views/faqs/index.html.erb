@@ -1,14 +1,8 @@
 <div class="row">
   <div class="col-md-12">
-    <h1 class="text-center page-header">Vanliga frågor och svar</h1>
+    <%= render_title 'faq' %>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      porta, libero a congue semper, ligula felis lobortis elit, at
-      tincidunt ex nisl gravida justo. Sed viverra sapien mi, in vehicula
-      lorem tristique a. Vivamus venenatis turpis odio, ut ultrices arcu
-      fermentum at.
-    </p>
+    <%= render_blob 'faq', 'contents', markdown: true %>
 
     <ul>
       <% @faqs.each do |faq| %>

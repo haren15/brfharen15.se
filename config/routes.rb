@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'contact/index'
 
   root 'welcome#index'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
 
   resources :news_items, path: 'nyheter'
   resources :faqs, path: 'vanliga-fragor-och-svar'
+  resources :blobs
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
