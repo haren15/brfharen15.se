@@ -1,5 +1,7 @@
 <% content_for :header do %>
-  <h1 class="welcome text-center">Välkommen till BRF Haren 15!</h1>
+  <h1 class="welcome text-center">
+    <%= render_blob 'welcome', 'header' %>
+  </h1>
 <% end %>
 
 <div class="row">
