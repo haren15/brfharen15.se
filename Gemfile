@@ -44,5 +44,6 @@ gem 'simple_form'
 group :development do
   gem 'hirb'
   gem 'rails_admin'
+  gem 'quiet_assets'
 end
 
