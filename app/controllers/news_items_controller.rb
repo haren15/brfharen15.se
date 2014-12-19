@@ -1,6 +1,6 @@
 class NewsItemsController < ApplicationController
   def index
-    @news_items = NewsItem.all
+    @news_items = NewsItem.published
   end
 
   def show
