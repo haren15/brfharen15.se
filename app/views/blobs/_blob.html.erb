@@ -5,10 +5,12 @@
     <%= blob.contents %>
   <% end %>
 
-  <a href="/blobs/<%= blob.id %>/edit" class="fancybox" data-fancybox-type="ajax">
-    <i class="fa fa-edit"></i>
-  </a>
-<% else %>
+  <% if admin_signed_in? %>
+    <a href="/blobs/<%= blob.id %>/edit" class="fancybox" data-fancybox-type="ajax">
+      <i class="fa fa-edit"></i>
+    </a>
+  <% end %>
+<% elsif admin_signed_in? %>
   <p>
     <a href="/blobs/new?key=<%= key %>" class="fancybox" data-fancybox-type="ajax">
       <i class="fa fa-plus"></i>

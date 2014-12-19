@@ -40,6 +40,7 @@ gem 'twitter-bootstrap-rails'
 gem 'redcarpet'
 gem 'fancybox2-rails', '~> 0.2.8'
 gem 'simple_form'
+gem 'devise'
 
 group :development do
   gem 'hirb'

@@ -1,4 +1,6 @@
 class BlobsController < ApplicationController
+  before_filter :authenticate_admin!
+
   def new
     @blob = Blob.new(key: params[:key])
 
