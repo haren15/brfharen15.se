@@ -1,6 +1,8 @@
-<%= simple_form_for(@blob, html: { class: 'form-horizontal blob' }) do |form| %>
-  <%= form.input :key, as: :hidden %>
-  <%= form.input :contents, label: false, input_html: { rows: 15, cols: 100 } %>
+<div style="margin: 15px">
+  <%= simple_form_for(@blob, html: { class: 'form-horizontal blob' }) do |form| %>
+    <%= form.input :key, as: :hidden %>
+    <%= form.input :contents, label: false, input_html: { rows: 15, cols: 100 } %>
 
-  <%= form.submit class: 'btn' %>
-<% end %>
+    <%= form.submit class: 'btn' %>
+  <% end %>
+</div>
