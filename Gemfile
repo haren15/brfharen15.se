@@ -40,11 +40,11 @@ gem 'redcarpet'
 gem 'fancybox2-rails', '~> 0.2.8'
 gem 'simple_form'
 gem 'devise'
+gem 'rails_admin'
 
 group :development do
   gem 'sqlite3'
   gem 'hirb'
-  gem 'rails_admin'
   gem 'quiet_assets'
 end
 
