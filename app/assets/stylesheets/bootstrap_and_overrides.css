@@ -6,16 +6,6 @@
   =require twitter-bootstrap-static/fontawesome
 */
 
-body {
-  font-family: 'Source Sans Pro', sans-serif;
-  background: url(/assets/background-small.png) no-repeat top center;
-  background-size: 100% auto;
-}
-
-body.welcome {
-  background: url(/assets/background-large.png) no-repeat top center;
-}
-
 body header {
   height: 200px;
 }

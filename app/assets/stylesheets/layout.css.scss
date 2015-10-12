@@ -1,0 +1,13 @@
+// Place all the styles related to the about controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: url(asset-path('background-small.png')) no-repeat top center;
+  background-size: 100% auto;
+}
+
+body.welcome {
+  background: url(asset-path('background-large.png')) no-repeat top center;
+}
