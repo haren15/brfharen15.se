@@ -23,7 +23,7 @@
               <ul>
                 <li><%= link_to render_blob('about', 'title'), about_path %></li>
                 <li><%= link_to render_blob('news_items', 'title'), news_items_path %></li>
-                <li><%= link_to render_blob('contact', 'title'), contact_path %></li>
+                <li><%= mail_to 'brf.haren15@gmail.com', render_blob('contact', 'title') %></li>
                 <li><%= link_to render_blob('faq', 'title'), faqs_path %></li>
               </ul>
             </nav>
