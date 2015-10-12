@@ -36,6 +36,7 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'pg'
 gem 'twitter-bootstrap-rails'
 gem 'redcarpet'
 gem 'fancybox2-rails', '~> 0.2.8'
