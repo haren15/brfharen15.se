@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   get '/om-foreningen' => 'about#index', as: 'about'
   get '/kontakt' => 'contact#index', as: 'contact'
+  get '/ny' => 'ny#index', as: 'ny'
 
   resources :news_items, path: 'nyheter'
   resources :faqs, path: 'faq'
