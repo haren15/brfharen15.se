@@ -71,3 +71,11 @@ a:hover, a:focus, a:active {
   color: white;
   opacity: 0.8;
 }
+
+.blob {
+  margin: 15px;
+}
+
+.blob .key {
+  margin: 0;
+}

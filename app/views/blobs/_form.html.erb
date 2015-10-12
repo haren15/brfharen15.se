@@ -1,4 +1,6 @@
-<div style="margin: 15px">
+<div class="blob">
+  <h3 class="key">Key: <%= @blob.key %></h3>
+
   <%= simple_form_for(@blob, html: { class: 'form-horizontal blob' }) do |form| %>
     <%= form.input :key, as: :hidden %>
     <%= form.input :contents, label: false, input_html: { rows: 15, cols: 100 } %>
