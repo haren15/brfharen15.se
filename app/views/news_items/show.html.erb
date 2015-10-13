@@ -5,6 +5,10 @@
     </h1>
 
     <p>
+      Publicerad: <%= @news_item.publish_at %>
+    </p>
+
+    <p>
       <%= markdown @news_item.description %>
     </p>
   </div>

@@ -1,6 +1,7 @@
 <div class="center">
   <h2><%= news_item.title %></h2>
   <p><%= truncate news_item.description, length: 200 %></p>
+  <p>Publicerad: <%= news_item.publish_at %></p>
   <p>
     <%= link_to 'Läs mer', news_item, class: 'btn btn-primary' %>
     <% if admin_signed_in? %>

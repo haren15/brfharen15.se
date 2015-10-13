@@ -5,6 +5,7 @@
 <% @news_items.each do |news_item| %>
   <div class="news-item">
     <h2><%= news_item.title %></h2>
+    <p>Publicerad: <%= news_item.publish_at %></p>
     <p><%= markdown news_item.description %></p>
     <%= link_to 'Läs mer', news_item, class: 'btn btn-primary' %>
     <% if admin_signed_in? %>
