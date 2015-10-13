@@ -79,3 +79,7 @@ header a:hover, header a:focus, header a:active {
 .blob .key {
   margin: 0;
 }
+
+li, p, section a {
+  font-size: 110%;
+}
