@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    @news_item_1, @news_item_2, @news_item_3 = NewsItem.published.limit(3)
+    @news_items = NewsItem.published.order('publish_at DESC').limit(3)
   end
 end
