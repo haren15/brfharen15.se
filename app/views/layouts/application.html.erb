@@ -13,18 +13,21 @@
     <header>
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <h1>
               <%= link_to render_blob('brand'), root_path %>
             </h1>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-8">
             <nav class="pull-right">
               <ul>
                 <li><%= link_to render_blob('about', 'title'), about_path %></li>
                 <li><%= link_to render_blob('news_items', 'title'), news_items_path %></li>
                 <li><%= mail_to 'brf.haren15@gmail.com', render_blob('contact', 'title') %></li>
                 <li><%= link_to render_blob('faq', 'title'), faqs_path %></li>
+                <% if admin_signed_in? %>
+                  <li><%= link_to 'Admin', rails_admin_path %></li>
+                <% end %>
               </ul>
             </nav>
           </div>
