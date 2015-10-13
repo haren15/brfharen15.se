@@ -28,3 +28,10 @@ $(document).ready(function() {
     }
   });
 });
+
+var FooterController = function($scope) {
+  $scope.year = new Date().getFullYear();
+};
+
+angular.module('Haren', [])
+  .controller('FooterController', ['$scope', FooterController]);
