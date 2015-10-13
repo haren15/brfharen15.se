@@ -17,9 +17,9 @@
 
       <hr />
 
-      <ul class="faqs">
+      <div class="faqs">
         <% @faqs.each do |faq| %>
-          <li ng-class="faqClass(<%= faq.id %>)">
+          <div class="faq" ng-class="faqClass(<%= faq.id %>)">
             <a name="<%= faq.id.to_s %>"></a>
             <p><b><%= faq.question %></b></p>
             <p><%= markdown faq.answer %></p>
@@ -28,9 +28,9 @@
                 <i class="fa fa-edit"></i>
               </a>
             <% end %>
-          </li>
+          </div>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
 </div>
