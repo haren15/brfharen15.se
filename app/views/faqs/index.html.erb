@@ -21,7 +21,7 @@
         <li>
           <a name="<%= faq.id.to_s %>"></a>
           <p><b><%= faq.question %></b></p>
-          <p><%= faq.answer %></p>
+          <p><%= markdown faq.answer %></p>
         </li>
       <% end %>
     </ul>
