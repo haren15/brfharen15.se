@@ -1,4 +1,10 @@
 class NewsItem < ActiveRecord::Base
+  rails_admin do
+    configure :description do
+      html_attributes rows: 20, cols: 120
+    end
+  end
+
   def self.published
     where('DATE(publish_at) <= ?', Date.today)
   end
