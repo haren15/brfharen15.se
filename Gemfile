@@ -43,6 +43,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'rails_admin'
 gem 'puma'
+gem 'angularjs-rails'
 gem 'rails_12factor', group: :production
 
 group :development do

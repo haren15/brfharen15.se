@@ -1,29 +1,31 @@
-<div class="row">
-  <div class="col-md-12">
-    <%= render_title 'faq' %>
+<div ng-controller="FaqController">
+  <div class="row">
+    <div class="col-md-12">
+      <%= render_title 'faq' %>
 
-    <%= render_blob 'faq', 'contents', markdown: true %>
+      <%= render_blob 'faq', 'contents', markdown: true %>
 
-    <hr />
+      <hr />
 
-    <ul>
-      <% @faqs.each do |faq| %>
-        <li>
-          <%= link_to faq.question, '#' + faq.id.to_s %>
-        </li>
-      <% end %>
-    </ul>
+      <ul>
+        <% @faqs.each do |faq| %>
+          <li>
+            <%= link_to faq.question, {anchor: faq.id.to_s}, 'ng-click' => "selectFaq(#{faq.id})" %>
+          </li>
+        <% end %>
+      </ul>
 
-    <hr />
+      <hr />
 
-    <ul>
-      <% @faqs.each do |faq| %>
-        <li>
-          <a name="<%= faq.id.to_s %>"></a>
-          <p><b><%= faq.question %></b></p>
-          <p><%= markdown faq.answer %></p>
-        </li>
-      <% end %>
-    </ul>
+      <ul class="faqs">
+        <% @faqs.each do |faq| %>
+          <li ng-class="faqClass(<%= faq.id %>)">
+            <a name="<%= faq.id.to_s %>"></a>
+            <p><b><%= faq.question %></b></p>
+            <p><%= markdown faq.answer %></p>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

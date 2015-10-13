@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 //= require fancybox
 //= require jquery.form.min
+//= require angular
 //= require_tree .
 
 $(document).ready(function() {
