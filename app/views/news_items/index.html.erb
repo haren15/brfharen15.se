@@ -7,5 +7,10 @@
     <h2><%= news_item.title %></h2>
     <p><%= markdown news_item.description %></p>
     <%= link_to 'Läs mer', news_item, class: 'btn btn-primary' %>
+    <% if admin_signed_in? %>
+      <a href="/admin/news_item/<%= news_item.id %>/edit" class="btn btn-primary">
+        <i class="fa fa-edit"></i>
+      </a>
+    <% end %>
   </div>
 <% end %>

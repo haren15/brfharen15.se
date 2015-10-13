@@ -23,6 +23,11 @@
             <a name="<%= faq.id.to_s %>"></a>
             <p><b><%= faq.question %></b></p>
             <p><%= markdown faq.answer %></p>
+            <% if admin_signed_in? %>
+              <a href="/admin/faq/<%= faq.id %>/edit">
+                <i class="fa fa-edit"></i>
+              </a>
+            <% end %>
           </li>
         <% end %>
       </ul>
