@@ -24,7 +24,7 @@
             <p><b><%= faq.question %></b></p>
             <p><%= markdown faq.answer %></p>
             <% if admin_signed_in? %>
-              <a href="/admin/faq/<%= faq.id %>/edit">
+              <a href="/admin/faq/<%= faq.id %>/edit" class="btn btn-primary btn-xs">
                 <i class="fa fa-edit"></i>
               </a>
             <% end %>

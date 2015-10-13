@@ -54,3 +54,7 @@ var FaqController = function($scope) {
 Haren
   .controller('FooterController', ['$scope', FooterController])
   .controller('FaqController', ['$scope', FaqController]);
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});

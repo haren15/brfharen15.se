@@ -6,16 +6,14 @@
   <% end %>
 
   <% if admin_signed_in? %>
-    <a href="/blobs/<%= blob.id %>/edit" class="fancybox" data-fancybox-type="ajax">
+    <a href="/blobs/<%= blob.id %>/edit" class="fancybox btn btn-primary btn-xs" data-fancybox-type="ajax" data-toggle="tooltip" title="<%= key %>">
       <i class="fa fa-edit"></i>
     </a>
   <% end %>
 <% elsif admin_signed_in? %>
   <div>
-    <a href="/blobs/new?key=<%= key %>" class="fancybox" data-fancybox-type="ajax">
+    <a href="/blobs/new?key=<%= key %>" class="fancybox btn btn-primary btn-xs" data-fancybox-type="ajax" data-toggle="tooltip" title="<%= key %>">
       <i class="fa fa-plus"></i>
     </a>
-    Add blob for
-    <strong><%= key %></strong>
   </div>
 <% end %>
