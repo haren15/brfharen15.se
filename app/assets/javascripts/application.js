@@ -29,9 +29,28 @@ $(document).ready(function() {
   });
 });
 
+var Haren = angular.module('Haren', []);
+
 var FooterController = function($scope) {
   $scope.year = new Date().getFullYear();
 };
 
-angular.module('Haren', [])
-  .controller('FooterController', ['$scope', FooterController]);
+var FaqController = function($scope) {
+  var hash = window.location.hash;
+  $scope.selectedFaqId = null;
+  if (hash) {
+    $scope.selectedFaqId = parseInt(hash.slice(1));
+  }
+  $scope.selectFaq = function(faqId) {
+    $scope.selectedFaqId = faqId;
+  };
+  $scope.faqClass = function(faqId) {
+    if (faqId == $scope.selectedFaqId) {
+      return 'highlight';
+    }
+  };
+};
+
+Haren
+  .controller('FooterController', ['$scope', FooterController])
+  .controller('FaqController', ['$scope', FaqController]);
