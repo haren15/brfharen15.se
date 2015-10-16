@@ -9,7 +9,7 @@ module ApplicationHelper
     options = args.extract_options!
 
     key = args.join('.')
-    blob = Blob.find_by_key(key)
+    blob = Blob.get(key)
 
     render :partial => 'blobs/blob', locals: { key: key, blob: blob, options: options }
   end

@@ -38,6 +38,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.8.0)
+    dalli (2.7.4)
     devise (3.4.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -175,6 +176,7 @@ PLATFORMS
 DEPENDENCIES
   angularjs-rails
   coffee-rails (~> 4.0.0)
+  dalli
   devise
   fancybox2-rails (~> 0.2.8)
   hirb

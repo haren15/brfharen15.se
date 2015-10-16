@@ -44,6 +44,7 @@ gem 'devise'
 gem 'rails_admin'
 gem 'puma'
 gem 'angularjs-rails'
+gem 'dalli'
 gem 'rails_12factor', group: :production
 
 group :development do
