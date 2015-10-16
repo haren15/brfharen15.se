@@ -19,10 +19,6 @@ body.welcome header {
   height: 778px;
 }
 
-body header a {
-  color: white;
-}
-
 body header nav li {
   float: left;
   list-style-type: none;
@@ -54,10 +50,6 @@ footer {
   padding: 30px 0;
 }
 
-footer a {
-  color: white;
-}
-
 section.main {
   margin-top: 30px;
   margin-bottom: 50px;
@@ -75,7 +67,9 @@ h1, h2 {
   font-weight: 600;
 }
 
-header a:hover, header a:focus, header a:active {
+header a, footer a { color: white; }
+header a:hover, header a:focus, header a:active,
+footer a:hover, footer a:focus, footer a:active {
   text-decoration: none;
   color: white;
   opacity: 0.8;
