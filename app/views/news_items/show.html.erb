@@ -14,4 +14,9 @@
   </div>
 </div>
 
-<%= link_to 'Visa alla nyheter', news_items_path %>
+<%= link_to 'Visa alla nyheter', news_items_path, class: 'btn btn-primary btn-xs' %>
+<% if admin_signed_in? %>
+  <a href="/admin/news_item/<%= @news_item.id %>/edit" class="btn btn-primary btn-xs">
+    <i class="fa fa-edit"></i>
+  </a>
+<% end %>
