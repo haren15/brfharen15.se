@@ -6,13 +6,13 @@
   <% end %>
 
   <% if admin_signed_in? %>
-    <a href="/blobs/<%= blob.id %>/edit" class="fancybox btn btn-primary btn-xs" data-fancybox-type="ajax" data-toggle="tooltip" title="<%= key %>">
+    <a href="/blobs/<%= blob.id %>/edit" class="fancybox btn btn-primary btn-xs" data-fancybox-type="ajax" data-toggle="tooltip" title="<%= key %>" ng-hide="previewMode">
       <i class="fa fa-pencil"></i>
     </a>
   <% end %>
 <% elsif admin_signed_in? %>
   <div>
-    <a href="/blobs/new?key=<%= key %>" class="fancybox btn btn-primary btn-xs" data-fancybox-type="ajax" data-toggle="tooltip" title="<%= key %>">
+    <a href="/blobs/new?key=<%= key %>" class="fancybox btn btn-primary btn-xs" data-fancybox-type="ajax" data-toggle="tooltip" title="<%= key %>" ng-hide="previewMode">
       <i class="fa fa-plus"></i>
     </a>
   </div>

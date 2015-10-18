@@ -24,7 +24,7 @@
             <p><b><%= faq.question %></b></p>
             <p><%= markdown faq.answer %></p>
             <% if admin_signed_in? %>
-              <a href="/admin/faq/<%= faq.id %>/edit" class="btn btn-primary btn-xs">
+              <a href="/admin/faq/<%= faq.id %>/edit" class="btn btn-primary btn-xs" ng-hide="previewMode">
                 <i class="fa fa-pencil"></i>
               </a>
             <% end %>

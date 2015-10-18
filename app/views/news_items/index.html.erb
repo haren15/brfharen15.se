@@ -9,7 +9,7 @@
     <p><%= markdown news_item.description %></p>
     <%= link_to 'Läs mer', news_item, class: 'btn btn-primary btn-xs' %>
     <% if admin_signed_in? %>
-      <a href="/admin/news_item/<%= news_item.id %>/edit" class="btn btn-primary btn-xs">
+      <a href="/admin/news_item/<%= news_item.id %>/edit" class="btn btn-primary btn-xs" ng-hide="previewMode">
         <i class="fa fa-pencil"></i>
       </a>
     <% end %>

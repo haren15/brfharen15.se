@@ -10,60 +10,69 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="<%= params[:controller] %>">
-    <header>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4" style="display: inline-block;">
-            <h1>
-              <%= link_to render_blob('brand'), root_path %>
-            </h1>
+    <div ng-controller="ApplicationController">
+      <% if admin_signed_in? %>
+        <div class="preview">
+          <a href="javascript: void(0)" ng-click="previewModeOn()" ng-hide="previewMode">Preview on</a>
+          <a href="javascript: void(0)" ng-click="previewModeOff()" ng-show="previewMode">Preview off</a>
+        </div>
+      <% end %>
+
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4" style="display: inline-block;">
+              <h1>
+                <%= link_to render_blob('brand'), root_path %>
+              </h1>
+            </div>
+            <div class="col-md-8" style="display: inline-block;">
+              <nav class="pull-right">
+                <ul>
+                  <li><%= link_to render_blob('about', 'title'), about_path %></li>
+                  <li><%= link_to render_blob('news_items', 'title'), news_items_path %></li>
+                  <li><%= mail_to 'brf.haren15@gmail.com', render_blob('contact', 'title') %></li>
+                  <li><%= link_to render_blob('faq', 'title'), faqs_path %></li>
+                  <% if admin_signed_in? %>
+                    <li ng-hide="previewMode"><%= link_to 'Admin', rails_admin_path %></li>
+                  <% end %>
+                </ul>
+              </nav>
+            </div>
           </div>
-          <div class="col-md-8" style="display: inline-block;">
-            <nav class="pull-right">
-              <ul>
-                <li><%= link_to render_blob('about', 'title'), about_path %></li>
-                <li><%= link_to render_blob('news_items', 'title'), news_items_path %></li>
-                <li><%= mail_to 'brf.haren15@gmail.com', render_blob('contact', 'title') %></li>
-                <li><%= link_to render_blob('faq', 'title'), faqs_path %></li>
-                <% if admin_signed_in? %>
-                  <li><%= link_to 'Admin', rails_admin_path %></li>
-                <% end %>
-              </ul>
-            </nav>
+
+          <%= yield :header %>
+        </div>
+      </header>
+
+      <section class="main">
+        <div class="container">
+          <% if notice %>
+            <p class="notice"><%= notice %></p>
+          <% end %>
+          <% if alert %>
+            <p class="alert"><%= alert %></p>
+          <% end %>
+
+          <%= yield %>
+        </div>
+      </section>
+
+      <footer>
+        <div class="container" ng-controller="FooterController">
+          <div class="row">
+            <div class="col-md-4">
+              <%= render_blob 'footer', 'left', markdown: true %>
+            </div>
+            <div class="col-md-4">
+              <%= render_blob 'footer', 'middle', markdown: true %>
+            </div>
+            <div class="col-md-4">
+              <%= render_blob 'footer', 'right', markdown: true %>
+            </div>
           </div>
         </div>
-
-        <%= yield :header %>
-      </div>
-    </header>
-
-    <section class="main">
-      <div class="container">
-        <% if notice %>
-          <p class="notice"><%= notice %></p>
-        <% end %>
-        <% if alert %>
-          <p class="alert"><%= alert %></p>
-        <% end %>
-
-        <%= yield %>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container" ng-controller="FooterController">
-        <div class="row">
-          <div class="col-md-4">
-            <%= render_blob 'footer', 'left', markdown: true %>
-          </div>
-          <div class="col-md-4">
-            <%= render_blob 'footer', 'middle', markdown: true %>
-          </div>
-          <div class="col-md-4">
-            <%= render_blob 'footer', 'right', markdown: true %>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>

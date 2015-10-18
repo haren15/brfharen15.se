@@ -51,9 +51,21 @@ var FaqController = function($scope) {
   };
 };
 
+var ApplicationController = function($scope) {
+  $.cookie.json = true;
+  var cookieName = 'preview-mode';
+  var setPreviewMode = function(status) {
+    return function() { $scope.previewMode = status; $.cookie(cookieName, status); };
+  };
+  $scope.previewMode = $.cookie(cookieName);
+  $scope.previewModeOn = setPreviewMode(true);
+  $scope.previewModeOff = setPreviewMode(false);
+};
+
 Haren
   .controller('FooterController', ['$scope', FooterController])
-  .controller('FaqController', ['$scope', FaqController]);
+  .controller('FaqController', ['$scope', FaqController])
+  .controller('ApplicationController', ['$scope', ApplicationController]);
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip();

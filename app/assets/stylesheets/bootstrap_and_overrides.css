@@ -82,3 +82,12 @@ footer a:hover, footer a:focus, footer a:active {
 .blob .key {
   margin: 0;
 }
+
+.preview {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: 1px solid #428bca;
+  background: white;
+  padding: 5px;
+}
