@@ -1,5 +1,14 @@
 <div class="blob">
-  <h3 class="key">Key: <%= @blob.key %></h3>
+  <h3 class="key">
+    <span>
+      Key: <%= @blob.key %>
+    </span>
+    <span class="pull-right">
+      <small>
+        <a href="https://daringfireball.net/projects/markdown/syntax" target="_blank">Markdown docs</a>
+      </small>
+    </span>
+  </h3>
 
   <%= simple_form_for(@blob, html: { class: 'form-horizontal blob' }) do |form| %>
     <%= form.input :key, as: :hidden %>
