@@ -7,7 +7,7 @@
 
   <% if admin_signed_in? %>
     <a href="/blobs/<%= blob.id %>/edit" class="fancybox btn btn-primary btn-xs" data-fancybox-type="ajax" data-toggle="tooltip" title="<%= key %>">
-      <i class="fa fa-edit"></i>
+      <i class="fa fa-pencil"></i>
     </a>
   <% end %>
 <% elsif admin_signed_in? %>
