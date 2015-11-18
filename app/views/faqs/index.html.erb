@@ -10,7 +10,7 @@
       <ul>
         <% @faqs.each do |faq| %>
           <li>
-            <%= link_to faq.question, {anchor: faq.id.to_s}, 'ng-click' => "selectFaq(#{faq.id})" %>
+            <%= link_to faq.question, {anchor: faq.to_param}, 'ng-click' => "selectFaq(#{faq.id})" %>
           </li>
         <% end %>
       </ul>
@@ -20,7 +20,7 @@
       <div class="faqs">
         <% @faqs.each do |faq| %>
           <div class="faq" ng-class="faqClass(<%= faq.id %>)">
-            <a name="<%= faq.id.to_s %>"></a>
+            <a name="<%= faq.to_param %>"></a>
             <p><b><%= faq.question %></b></p>
             <p><%= markdown faq.answer %></p>
             <% if admin_signed_in? %>

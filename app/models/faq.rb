@@ -4,4 +4,8 @@ class Faq < ActiveRecord::Base
       html_attributes rows: 20, cols: 120
     end
   end
+
+  def to_param
+    "#{id}, #{question}".parameterize
+  end
 end
