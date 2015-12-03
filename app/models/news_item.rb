@@ -9,6 +9,10 @@ class NewsItem < ActiveRecord::Base
     where('DATE(publish_at) <= ?', Date.today)
   end
 
+  def self.ordered
+    order('publish_at DESC')
+  end
+
   def to_param
     "#{id} #{title}".parameterize
   end
